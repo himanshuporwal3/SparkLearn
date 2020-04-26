@@ -50,3 +50,5 @@ Spark Learning
 
 3. Create the package and add a class. **eg: Spark1App** 
 
+4. Create a java class, under a package named transformation.
+
