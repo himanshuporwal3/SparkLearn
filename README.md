@@ -9,8 +9,8 @@ Spark Learning
 
 2.  Add the Spark Core , SQL and MLlib maven dependency. (Copy the content from below and paste in **pom.xml**)
 
-   
-       
+
+​       
 
    ```xml
    <!--Spark-->
@@ -49,6 +49,28 @@ Spark Learning
    ```
 
 3. Create the package and add a class. **eg: Spark1App** 
-
 4. Create a java class, under a package named transformation.
 
+
+
+##### Spark Programming Model
+
+1. Create a Spark Session using the **SparkSession.Builder**
+
+   ```java
+   SparkSession spark = new SparkSession.Builder()
+           .appName("CSV to DB")
+           .master("local")
+           .getOrCreate(); //find more option in SessionBuilder
+   ```
+
+   
+
+2. Get data from Source. Spark provides numerous connectors to variety of data sources. 
+
+   ```java
+   Dataset<Row> df = spark.read()
+           .format("csv")
+           .option("header", true)
+           .load("src/main/resources/name_and_comments.txt");
+   ```
