@@ -74,3 +74,45 @@ Spark Learning
            .option("header", true)
            .load("src/main/resources/name_and_comments.txt");
    ```
+
+3. Once the data is loaded in data frame, transformation can be applied on it. 
+
+4. Transformations results can be stored in **same data frame** or in different data frame
+
+   ```java
+   //Tranformations
+   df = df.withColumn("full_name", concat(df.col("last_name"), lit(", "), df.col("first_name")));
+   
+   //Transformation Filter
+   df = df.filter(df.col("comment")
+           .rlike("\\d+"))
+           .orderBy(df.col("last_name").asc());
+   
+   df.show(100);
+   ```
+
+
+
+5. Final / temporary  output can be **written to sink / destination.**
+
+6. In order to best write to a db, it is advisable to write a config file to read the connection string and properties. 
+
+   ```java
+   //Eg: to write in SQL Server
+   //Write output to Sink (in this case SQL SERVER)
+   String dbConnectionUrl = "jdbc:sqlserver://DESKTOP-PN2NT62\\RAKHISQL";
+   
+   //Connection properties
+   Properties dbProp = new Properties();
+   dbProp.setProperty("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
+   dbProp.setProperty("user", "tutorial");
+   dbProp.setProperty("database","SPARKDB");
+   dbProp.setProperty("password", "mambo1234");
+   
+   //write through jdbc connector
+   // .jdbc(serverurl, tablename, connection properties);
+   df.write()
+           .mode(SaveMode.Overwrite)
+           .jdbc(dbConnectionUrl, "project1", dbProp);
+   ```
+

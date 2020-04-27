@@ -31,17 +31,14 @@ public class SparkApplication_CSVtoDB {
         //Tranformations
         df = df.withColumn("full_name", concat(df.col("last_name"), lit(", "), df.col("first_name")));
 
-        //  df.withColumn().filte
-
-        df.show();
-
         //Transformation Filter
         df = df.filter(df.col("comment")
                 .rlike("\\d+"))
                 .orderBy(df.col("last_name").asc());
 
-        df.show();
+        df.show(100);
 
+        //Write output to Sink (in this case SQL SERVER)
         String dbConnectionUrl = "jdbc:sqlserver://DESKTOP-PN2NT62\\RAKHISQL";
         Properties dbProp = new Properties();
         dbProp.setProperty("driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
