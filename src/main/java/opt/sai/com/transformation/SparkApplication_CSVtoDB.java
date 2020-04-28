@@ -49,5 +49,11 @@ public class SparkApplication_CSVtoDB {
                 .mode(SaveMode.Overwrite)
                 .jdbc(dbConnectionUrl, "project1", dbProp);
 
+
+        //nifi receiver
+//        SiteToSiteClientConfig config = new SiteToSiteClient.Builder()
+//                .url("http://localhost:8080/nifi")
+//                .portName("Data For Spark")
+//                .buildConfig();
     }
 }

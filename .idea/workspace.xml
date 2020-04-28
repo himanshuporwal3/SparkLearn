@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e1e59d8d-5545-42a5-8ce9-e7c954094070" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/opt/sai/com/transformation/SparkApplication_CSVtoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/opt/sai/com/transformation/SparkApplication_CSVtoDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,9 +34,10 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Sparkcourse-Tutor/sparkwithjava-master/project1/pom.xml" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Sparkcourse-Tutor/sparkwithjava-master/project2/pom.xml" />
   </component>
   <component name="RunManager">
     <configuration name="SparkApplication_CSVtoDB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -80,10 +81,10 @@
       <screen x="0" y="0" width="1280" height="760" />
     </state>
     <state x="97" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1587884034266" />
-    <state x="422" y="138" key="FileChooserDialogImpl" timestamp="1587883118495">
+    <state x="422" y="138" key="FileChooserDialogImpl" timestamp="1587952320513">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
-    <state x="422" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1587883118495" />
+    <state x="422" y="138" key="FileChooserDialogImpl/0.0.1280.760@0.0.1280.760" timestamp="1587952320513" />
     <state width="1204" height="174" key="GridCell.Tab.0.bottom" timestamp="1587950551257">
       <screen x="0" y="0" width="1280" height="760" />
     </state>
